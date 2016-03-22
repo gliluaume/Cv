@@ -1,0 +1,281 @@
+
+#timeline_placeholder_old {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+
+
+form .btn-primary {
+    margin-top: 25px;
+}
+
+.bs-example>.btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+.col-md-12>.btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+/*
+  PERIODS
+*/
+/* marche pas
+.period-zone {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.period-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.period-zone>.period-group, .period-zone>.period {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.period-group>.period {
+  position: relative;
+  float: left;
+}
+*/
+
+
+/*float: left;   TODO Suppr fait bugger le div au dessus dans .period-group>.period  par exemple*/
+.clearfixtimeline:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
+.period-zone {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.period-zone>.period-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.period-zone>.period-group, .period-zone>.period {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.period-group>.period {
+  position: relative;
+  float: left;
+}
+
+.period-zone {
+  min-width: 100%;
+}
+
+.period-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.period-group:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
+
+.period {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 120%;
+  line-height: 1.33;
+  color: #ffffff;
+  background-color: #5bc0de;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 10px 16px;
+  border-radius: 0px;
+  cursor : pointer;
+}
+.period-blue {
+  color: white;
+  background-color: @g-blue-light;
+  border-color: @g-blue-dark;
+}
+.period-blue:hover {
+  color: white;
+  background-color: @g-blue-normal;
+  border-color: @g-blue-dark;
+}
+/*
+  TILES
+*/
+.tile-zone {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.tile-zone>.tile-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.tile-zone>.tile-group, .tile-zone>.tile {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.tile-group>.tile {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.tile-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tile {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #5bc0de;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em 0 .25em 0;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* mes couleurs */
+.tile-cyan {
+  color: white;
+  background-color: @g-cyan-light;
+  border-color: @g-cyan-dark;
+}
+.tile-cyan:hover {
+  color: white;
+  background-color: @g-cyan-normal;
+  border-color: @g-cyan-dark;
+}
+.tile-blue {
+  color: white;
+  background-color: @g-blue-light;
+  border-color: @g-blue-dark;
+}
+.tile-blue:hover {
+  color: white;
+  background-color: @g-blue-normal;
+  border-color: @g-blue-dark;
+}
+
+.tile-purple {
+  color: white;
+  background-color: @g-purple-light;
+  border-color: @g-purple-dark;
+}
+
+.tile-purple:hover {
+  color: white;
+  background-color: @g-purple-normal;
+  border-color: @g-purple-dark;
+}
+
+.tile-red {
+  color: white;
+  background-color: @g-red-light;
+  border-color: @g-red-dark;
+
+}
+.tile-red:hover {
+  color: white;
+  background-color: @g-red-normal;
+  border-color: @g-red-dark;
+}
+
+.tile-magenta {
+  color: white;
+  background-color: @g-magenta-light;
+  border-color: @g-magenta-dark;
+}
+.tile-magenta:hover {
+  color: white;
+  background-color: @g-magenta-normal;
+  border-color: @g-magenta-dark;
+}
+
+.btn-cyan {
+  color: white;
+  background-color: @g-cyan-dark;
+  border-color: @g-cyan-dark;
+}
+.btn-cyan:hover {
+  color: white;
+  background-color: @g-cyan-normal;
+  border-color: @g-cyan-dark;
+}
+
+.btn-blue {
+  color: white;
+  background-color: @g-blue-light;
+  border-color: @g-blue-dark;
+}
+.btn-blue:hover {
+  color: @g-blue-lighter;
+  background-color: @g-blue-normal;
+  border-color: @g-blue-dark;
+}
+
+.btn-purple {
+  color: white;
+  background-color: @g-purple-light;
+  border-color: @g-purple-dark;
+}
+.btn-purple:hover {
+  color: white;
+  background-color: @g-purple-normal;
+  border-color: @g-purple-dark;
+}
+
+.btn-red {
+  color: white;
+  background-color: @g-red-light;
+  border-color: @g-red-dark;
+}
+.btn-red:hover {
+  color: white;
+  background-color: @g-red-normal;
+  border-color: @g-red-dark;
+}
+
+.btn-magenta {
+  color: white;
+  background-color: @g-magenta-light;
+  border-color: @g-magenta-dark;
+}
+.btn-magenta:hover {
+  color: white;
+  background-color: @g-magenta-normal;
+  border-color: @g-magenta-dark;
+}
+
+
+
+
+

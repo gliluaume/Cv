@@ -1,0 +1,293 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+@import '../../vendor/bootstrap/less/bootstrap.less';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import 'variables.less';
+
+
+
+
+/* pour le fixed nav bar*/
+body {
+  padding-top: 60px;
+}
+.red {
+  color : red;
+}
+
+/* listes */
+ul
+{
+  list-style-type: none;
+  margin-left: -2em;
+  margin-right: 0.5em;
+}
+
+.affixed {
+  color : red;
+}
+
+.fixed {
+  position : fixed;
+  top : 40px;
+}
+
+.dropdown-fixed {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  min-width: 160px;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin-top: 0.12em;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+/* mes couleurs */
+.g-cyan-base {
+  background-color: @g-cyan-base;
+}
+.g-cyan-darker {
+  background-color: @g-cyan-darker;
+}
+.g-cyan-dark {
+  background-color: @g-cyan-dark;
+}
+.g-cyan-normal {
+  background-color: @g-cyan-normal;
+}
+.g-cyan-light {
+  background-color: @g-cyan-light;
+}
+.g-cyan-lighter {
+  background-color: @g-cyan-lighter;
+}
+
+.g-blue-base {
+  background-color: @g-blue-base;
+}
+.g-blue-darker {
+  background-color: @g-blue-darker;
+}
+.g-blue-dark {
+  background-color: @g-blue-dark;
+}
+.g-blue-normal {
+  background-color: @g-blue-normal;
+}
+.g-blue-light {
+  background-color: @g-blue-light;
+}
+.g-blue-lighter {
+  background-color: @g-blue-lighter;
+}
+.g-red-base {
+  background-color: @g-red-base;
+}
+.g-red-darker {
+  background-color: @g-red-darker;
+}
+.g-red-dark {
+  background-color: @g-red-dark;
+}
+.g-red-normal {
+  background-color: @g-red-normal;
+}
+.g-red-light {
+  background-color: @g-red-light;
+}
+.g-red-lighter {
+  background-color: @g-red-lighter;
+}
+
+.g-magenta-base {
+  background-color: @g-magenta-base;
+}
+.g-magenta-darker {
+  background-color: @g-magenta-darker;
+}
+.g-magenta-dark {
+  background-color: @g-magenta-dark;
+}
+.g-magenta-normal {
+  background-color: @g-magenta-normal;
+}
+.g-magenta-light {
+  background-color: @g-magenta-light;
+}
+.g-magenta-lighter {
+  background-color: @g-magenta-lighter;
+}
+
+.g-purple-base {
+  background-color: @g-purple-base;
+}
+.g-purple-darker {
+  background-color: @g-purple-darker;
+}
+.g-purple-dark {
+  background-color: @g-purple-dark;
+}
+.g-purple-normal {
+  background-color: @g-purple-normal;
+}
+.g-purple-light {
+  background-color: @g-purple-light;
+}
+.g-purple-lighter {
+  background-color: @g-purple-lighter;
+}purple
+
+.g-blue {
+  color: @g-blue-normal;
+}
+.g-blue:hover {
+  color: @g-blue-darker;
+}
+
+.g-purple {
+  color: @g-purple-normal;
+}
+.g-purple:hover {
+  color: @g-purple-darker;
+}
+
+.g-red {
+  color: @g-red-normal;
+}
+.g-red:hover {
+  color: @g-red-darker;
+}
+.g-magenta {
+  color: @g-magenta-normal;
+}
+.g-magenta:hover {
+  color: @g-magenta-darker;
+}
+
+
+/*
+.navbar-default .navbar-brand {
+  color: @g-blue-normal;
+}*/
+/**
+ * Typography
+ */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+}
+
+code, pre, .pre {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #EFEFEF;
+  border: 1px solid #DADADA;
+  border-radius: 3px;
+}
+
+code {
+  padding: 0 3px;
+}
+
+pre {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.page-header {
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+h2 {
+  margin: 20px 0;
+  color: #666;
+}
+
+
+/**
+ * Navigation
+ */
+
+.navbar {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  
+  small {
+    font-size: 60%;
+  }
+}
+
+
+/**
+ * Footer
+ */
+
+.footer {
+  margin-top: 20px;
+
+  .footer-inner {
+    padding: 4px 0;
+    border-top: 1px solid #DDD;
+  }
+
+  .social {
+    float: right;
+    margin: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 20px;
+
+      a, a:visited {
+        color: @gray-light;
+        text-decoration: none;
+        font-size: 40px;
+        .transition( 250ms ease-in-out );
+
+        &:hover {
+          color: @gray;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using. 
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+@import '../app/home/home.less';
+@import '../app/graph/timeline/timeline.less';
+

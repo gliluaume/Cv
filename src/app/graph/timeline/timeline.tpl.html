@@ -1,0 +1,55 @@
+
+<button type="button" class="btn btn-default" data-ng-click="listHidden = !listHidden">
+  Sélection des données
+  <span class="caret"></span>
+</button>
+<div class="row" data-ng-hide="listHidden">
+  <div class="col-md-12">
+    <div class="dropdown-fixed">
+      <div class="text-right">
+        <button type="button" class="btn btn-xs btn-default" data-ng-click="listHidden = true">
+          <i class="fa fa-remove red"></i>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li data-ng-repeat="typeSel in typeSelection">
+            <input type="checkbox" data-ng-model="typeSel.selected" data-ng-change="changeSel(typeSel)" 
+                    data-ng-disabled="canBeRemoved(typeSel)">
+              {{typeSel.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="timeline-placeholder">
+      {{desc}}
+    </div>
+    <div class="period-zone" >
+      <div class="period-group" >
+        <span data-ng-repeat="period in data.periods" data-ng-class="{'period' : true, 'period-active' : period.clicked}" 
+              style="width:{{period.relWidth}}%;background-color:hsl({{period.colorHue}},{{period.colorSaturation}}%,{{period.colorLightness}}%)"
+              data-ng-mouseenter="mouseEnterMain(period)"
+              data-ng-mouseleave="mouseLeaveMain(period)"
+              data-ng-click="mouseClick(period)"
+              ></span>
+      </div>
+    </div>
+    <br>
+    <p>p{{filteredItemsByType.length}}p</p>
+    <div class="tile-zone" >
+      <div class="tile-group" data-ng-repeat="(type, listItems) in filteredItemsByType">
+      <!--<h5>{{type}}</h5>-->
+        <span data-ng-class="{'tile' : true,  'discreet' : item.isDiscreet}" 
+              data-ng-repeat="item in listItems"
+              style="width:150px;background-color:hsl({{item.colorHue}},90%,70%)">{{item.label}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+        <span class="tile" 
+              style="width:150px;background-color:hsl({{item.colorHue}},90%,70%)">test tuile</span>

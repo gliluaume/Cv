@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-default" data-ng-click="listHidden = false">
+  Sélection des données
+  <span class="caret"></span>
+</button>
+<div class="row" data-ng-hide="listHidden">
+  <div class="col-md-12">
+    <div class="dropdown-fixed">
+      <div class="text-right">
+        <button type="button" class="btn btn-xs btn-default" data-ng-click="listHidden = true">
+          <i class="fa fa-remove red"></i>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li data-ng-repeat="typeSel in typeSelection">
+            <input type="checkbox" data-ng-model="typeSel.selected" data-ng-change="changeSel(typeSel)" 
+                    data-ng-disabled="canBeRemoved(typeSel)">
+              {{typeSel.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

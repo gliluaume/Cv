@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="ngCv" ng-controller="AppCtrl">
+  <head>
+
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@joshdmiller">
+    <meta name="twitter:title" content="ngCv">
+    <meta name="twitter:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+    <meta name="twitter:creator" content="@joshdmiller">
+    <meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
+    <meta property="og:title" content="ngCv" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bit.ly/ngCv" />
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+    <meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+    <script src="assets/js/d3.dependencyWheel.js"></script>
+    <script src="assets/js/d3.timeline.js"></script>
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      { "parsetags": "explicit" }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-ng-init="menuCollapsed = true" data-ng-click="menuCollapsed = ! menuCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            Guillaume Salicis
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+              <li ui-sref-active="active" data-ng-click="ManageCollapsibleMenuOnClick()">
+                <a href ui-sref="home">
+                  <i class="fa fa-home"></i>
+                  Home
+                </a>
+              </li>
+              <li ui-sref-active="active" data-ng-click="ManageCollapsibleMenuOnClick()">
+                <a href ui-sref="curriculum">
+                  <i class="fa fa-road"></i>
+                  Curriculum
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-hand-o-right"></i> Parcours <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="experience">
+                      Expérience
+                    </a>
+                  </li>
+                  <li data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="skill">
+                      Compétences
+                    </a>
+                  </li>
+                  <li data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="education">
+                      Formation
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-line-chart"></i> Graphiques <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="hidden-xs" data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="graph.wheel">
+                      <i class="fa fa-pie-chart"></i>
+                      Roues des compétences
+                    </a>
+                  </li>
+                  <li class="" data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="graph.timeline">
+                      <i class="fa fa-arrows-h"></i>
+                      Fresque
+                    </a>
+                  </li>
+                  <li class="" data-ng-click="ManageCollapsibleMenuOnClick()">
+                    <a href ui-sref="graph.timelineD3">
+                      <i class="fa fa-arrows-h"></i>
+                      Fresque D3JS
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li ui-sref-active="active" data-ng-click="ManageCollapsibleMenuOnClick()">
+                <a href="assets/Guillaume_Salicis.pdf">
+                  <i class="fa fa-file-pdf-o"></i>
+                  Télécharger la version PDF
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <ul class="social ">
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/pub/guillaume-salicis">
+                <i class="fa fa-linkedin-square g-blue"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="http://www.github.com/gliluaume">
+                <i class="fa fa-github g-blue"></i>
+              </a>
+            </li>
+<!--
+            <li>
+              <a target="_blank" href="http://www.google.fr">
+                <i class="fa fa-twitter-square g-blue"></i>
+              </a>
+            </li>
+-->
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>
